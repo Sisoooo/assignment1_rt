@@ -1,0 +1,38 @@
+[0.024s] Invoking command in '/root/assignment1_rt/build/assignment1_rt': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake /root/assignment1_rt -DCMAKE_INSTALL_PREFIX=/root/assignment1_rt/install/assignment1_rt
+[0.275s] -- The C compiler identification is GNU 13.3.0
+[0.410s] -- The CXX compiler identification is GNU 13.3.0
+[0.435s] -- Detecting C compiler ABI info
+[0.565s] -- Detecting C compiler ABI info - done
+[0.573s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.575s] -- Detecting C compile features
+[0.575s] -- Detecting C compile features - done
+[0.587s] -- Detecting CXX compiler ABI info
+[0.690s] -- Detecting CXX compiler ABI info - done
+[0.699s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.699s] -- Detecting CXX compile features
+[0.699s] -- Detecting CXX compile features - done
+[0.737s] -- Found ament_cmake: 2.5.4 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[0.930s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+[1.101s] -- Found rclpy: 7.1.5 (/opt/ros/jazzy/share/rclpy/cmake)
+[1.105s] -- Found rclcpp: 28.1.11 (/opt/ros/jazzy/share/rclcpp/cmake)
+[1.210s] -- Found rosidl_generator_c: 4.6.6 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)
+[1.242s] -- Found rosidl_generator_cpp: 4.6.6 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)
+[1.278s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.312s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.450s] -- Found rmw_implementation_cmake: 7.3.2 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)
+[1.457s] -- Found rmw_fastrtps_cpp: 8.4.3 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)
+[1.580s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.13")  
+[1.607s] -- Found FastRTPS: /opt/ros/jazzy/include (Required is at least version "2.13") 
+[1.632s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[1.756s] -- Found turtlesim: 1.8.3 (/opt/ros/jazzy/share/turtlesim/cmake)
+[1.848s] -- Found geometry_msgs: 5.3.6 (/opt/ros/jazzy/share/geometry_msgs/cmake)
+[2.014s] [31mCMake Error at /opt/ros/jazzy/share/ament_cmake_python/cmake/ament_python_install_package.cmake:66 (message):
+[2.015s]   ament_python_install_package() the Python package folder
+[2.015s]   '/root/assignment1_rt/assignment1_rt' doesn't contain an '__init__.py' file
+[2.015s] Call Stack (most recent call first):
+[2.015s]   /opt/ros/jazzy/share/ament_cmake_python/cmake/ament_python_install_package.cmake:39 (_ament_cmake_python_install_package)
+[2.015s]   CMakeLists.txt:20 (ament_python_install_package)
+[2.015s] 
+[2.015s] [0m
+[2.015s] -- Configuring incomplete, errors occurred!
+[2.023s] Invoked command in '/root/assignment1_rt/build/assignment1_rt' returned '1': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake /root/assignment1_rt -DCMAKE_INSTALL_PREFIX=/root/assignment1_rt/install/assignment1_rt
