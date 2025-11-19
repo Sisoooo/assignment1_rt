@@ -1,0 +1,49 @@
+[0.023s] Invoking command in '/root/assignment1_rt/build/assignment1_rt': /usr/bin/cmake --build /root/assignment1_rt/build/assignment1_rt -- -j20 -l20
+[0.158s] -- Found ament_cmake: 2.5.4 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[0.425s] -- Found rclpy: 7.1.5 (/opt/ros/jazzy/share/rclpy/cmake)
+[0.425s] -- Found rclcpp: 28.1.11 (/opt/ros/jazzy/share/rclcpp/cmake)
+[0.499s] -- Found rosidl_generator_c: 4.6.6 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)
+[0.514s] -- Found rosidl_generator_cpp: 4.6.6 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)
+[0.537s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.557s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.655s] -- Found rmw_implementation_cmake: 7.3.2 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)
+[0.658s] -- Found rmw_fastrtps_cpp: 8.4.3 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)
+[0.758s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.852s] -- Found turtlesim: 1.8.3 (/opt/ros/jazzy/share/turtlesim/cmake)
+[0.929s] -- Found std_msgs: 5.3.6 (/opt/ros/jazzy/share/std_msgs/cmake)
+[0.950s] -- Found geometry_msgs: 5.3.6 (/opt/ros/jazzy/share/geometry_msgs/cmake)
+[1.055s] Error parsing '/root/assignment1_rt/package.xml':
+[1.055s] Traceback (most recent call last):
+[1.055s]   File "/opt/ros/jazzy/share/ament_cmake_core/cmake/core/package_xml_2_cmake.py", line 150, in <module>
+[1.055s]     main()
+[1.055s]   File "/opt/ros/jazzy/share/ament_cmake_core/cmake/core/package_xml_2_cmake.py", line 53, in main
+[1.055s]     raise e
+[1.055s]   File "/opt/ros/jazzy/share/ament_cmake_core/cmake/core/package_xml_2_cmake.py", line 49, in main
+[1.055s]     package = parse_package_string(
+[1.055s]               ^^^^^^^^^^^^^^^^^^^^^
+[1.055s]   File "/usr/lib/python3/dist-packages/catkin_pkg/package.py", line 786, in parse_package_string
+[1.057s]     raise InvalidPackage('Error(s):%s' % (''.join(['\n- %s' % e for e in errors])), filename)
+[1.057s] catkin_pkg.package.InvalidPackage: Error(s) in package '/root/assignment1_rt/package.xml':
+[1.057s] Error(s):
+[1.057s] - The generic dependency on 'rclpy' is redundant with: exec_depend
+[1.057s] - The generic dependency on 'rclcpp' is redundant with: exec_depend
+[1.057s] - The generic dependency on 'turtlesim' is redundant with: exec_depend
+[1.057s] - The generic dependency on 'std_msgs' is redundant with: exec_depend
+[1.057s] - The generic dependency on 'geometry_msgs' is redundant with: exec_depend
+[1.058s] - The generic dependency on 'float32' is redundant with: exec_depend
+[1.068s] [31mCMake Error at /opt/ros/jazzy/share/ament_cmake_core/cmake/core/ament_package_xml.cmake:95 (message):
+[1.068s]   execute_process(/usr/bin/python3
+[1.068s]   /opt/ros/jazzy/share/ament_cmake_core/cmake/core/package_xml_2_cmake.py
+[1.068s]   /root/assignment1_rt/package.xml
+[1.068s]   /root/assignment1_rt/build/assignment1_rt/ament_cmake_core/package.cmake)
+[1.068s]   returned error code 1
+[1.068s] Call Stack (most recent call first):
+[1.068s]   /opt/ros/jazzy/share/ament_cmake_core/cmake/core/ament_package_xml.cmake:49 (_ament_package_xml)
+[1.069s]   /opt/ros/jazzy/share/ament_cmake_python/cmake/ament_python_install_package.cmake:60 (ament_package_xml)
+[1.069s]   /opt/ros/jazzy/share/ament_cmake_python/cmake/ament_python_install_package.cmake:39 (_ament_cmake_python_install_package)
+[1.069s]   CMakeLists.txt:23 (ament_python_install_package)
+[1.069s] 
+[1.069s] [0m
+[1.069s] -- Configuring incomplete, errors occurred!
+[1.081s] gmake: *** [Makefile:295: cmake_check_build_system] Error 1
+[1.084s] Invoked command in '/root/assignment1_rt/build/assignment1_rt' returned '2': /usr/bin/cmake --build /root/assignment1_rt/build/assignment1_rt -- -j20 -l20

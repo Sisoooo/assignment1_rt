@@ -1,4 +1,5 @@
-/root/assignment1_rt/install/assignment1_rt/lib/assignment1_rt/interface_node
+/root/assignment1_rt/install/assignment1_rt/lib/assignment1_rt/TextInterface
+/root/assignment1_rt/install/assignment1_rt/lib/assignment1_rt/TurtlesController
 /root/assignment1_rt/install/assignment1_rt/share/assignment1_rt/environment/pythonpath.sh
 /root/assignment1_rt/install/assignment1_rt/share/assignment1_rt/environment/pythonpath.dsv
 /root/assignment1_rt/install/assignment1_rt/lib/python3.12/site-packages/assignment1_rt-0.0.0-py3.12.egg-info/PKG-INFO

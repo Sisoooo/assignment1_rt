@@ -1,0 +1,18 @@
+[31mCMake Error at CMakeLists.txt:16 (find_package):
+  By not providing "Findfloat32.cmake" in CMAKE_MODULE_PATH this project has
+  asked CMake to find a package configuration file provided by "float32", but
+  CMake did not find one.
+
+  Could not find a package configuration file provided by "float32" with any
+  of the following names:
+
+    float32Config.cmake
+    float32-config.cmake
+
+  Add the installation prefix of "float32" to CMAKE_PREFIX_PATH or set
+  "float32_DIR" to a directory containing one of the above files.  If
+  "float32" provides a separate development package or SDK, be sure it has
+  been installed.
+
+[0m
+gmake: *** [Makefile:295: cmake_check_build_system] Error 1

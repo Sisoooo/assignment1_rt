@@ -1,4 +1,5 @@
 #include "rclcpp/rclcpp.hpp"
+#include "turtlesim/msg/pose.hpp"
 #include "std_msgs/msg/string.hpp"
 #include "geometry_msgs/msg/twist.hpp"
 #include <iostream>
@@ -10,17 +11,17 @@ int main(int argc, char * argv[]){
     auto publisher2_ = node->create_publisher<geometry_msgs::msg::Twist>("turtle2/cmd_vel", 10);
     auto message = geometry_msgs::msg::Twist();
     while(rclcpp::ok()){
-        std::cout << "Interface to control turtles, press q at any prompt to quit." << std::endl;
-        std::string lx_input, a_input, turtle_choice;
-        std::cout << "Enter linear velocity (x-axis) as double number (e.g. 1.0): " << std::endl;
+        std::cout << "Interface to control turtles, press q at any prompt to quit" << std::endl;
+        std::string lx_input, ly_input, a_input, turtle_choice;
+        std::cout << "Enter linear velocity (x-axis) as float number (e.g. 1.0): " << std::endl;
         std::getline(std::cin, lx_input);
-        std::cout << "Enter linear velocity (y-axis) as double number (e.g. 1.0): " << std::endl;
+        std::cout << "Enter linear velocity (y-axis) as float number (e.g. 1.0): " << std::endl;
         std::getline(std::cin, ly_input);
-        std::cout << "Enter angular velocity (z-axis) as double number (e.g. 1.0): " << std::endl;
+        std::cout << "Enter angular velocity (z-axis) as float number (e.g. 1.0): " << std::endl;
         std::getline(std::cin, a_input);
         std::cout << "Enter turtle choice (1 or 2): " << std::endl;
         std::getline(std::cin, turtle_choice);
-        if(l_input == "q" || a_input == "q" || turtle_choice == "q"){
+        if(lx_input == "q" || ly_input == "q" || a_input == "q" || turtle_choice == "q"){
             rclcpp::shutdown();
             break;
         }

@@ -1,0 +1,34 @@
+[0.025s] Invoking command in '/root/assignment1_rt/build/assignment1_rt': /usr/bin/cmake --build /root/assignment1_rt/build/assignment1_rt -- -j20 -l20
+[0.081s] -- Found ament_cmake: 2.5.4 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[0.345s] -- Found rclpy: 7.1.5 (/opt/ros/jazzy/share/rclpy/cmake)
+[0.346s] -- Found rclcpp: 28.1.11 (/opt/ros/jazzy/share/rclcpp/cmake)
+[0.436s] -- Found rosidl_generator_c: 4.6.6 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)
+[0.450s] -- Found rosidl_generator_cpp: 4.6.6 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)
+[0.473s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.495s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.595s] -- Found rmw_implementation_cmake: 7.3.2 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)
+[0.600s] -- Found rmw_fastrtps_cpp: 8.4.3 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)
+[0.712s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.817s] -- Found turtlesim: 1.8.3 (/opt/ros/jazzy/share/turtlesim/cmake)
+[0.901s] -- Found std_msgs: 5.3.6 (/opt/ros/jazzy/share/std_msgs/cmake)
+[0.922s] -- Found geometry_msgs: 5.3.6 (/opt/ros/jazzy/share/geometry_msgs/cmake)
+[0.996s] [31mCMake Error at CMakeLists.txt:16 (find_package):
+[0.996s]   By not providing "Findfloat32.cmake" in CMAKE_MODULE_PATH this project has
+[0.996s]   asked CMake to find a package configuration file provided by "float32", but
+[0.996s]   CMake did not find one.
+[0.996s] 
+[0.996s]   Could not find a package configuration file provided by "float32" with any
+[0.996s]   of the following names:
+[0.996s] 
+[0.996s]     float32Config.cmake
+[0.996s]     float32-config.cmake
+[0.996s] 
+[0.996s]   Add the installation prefix of "float32" to CMAKE_PREFIX_PATH or set
+[0.996s]   "float32_DIR" to a directory containing one of the above files.  If
+[0.996s]   "float32" provides a separate development package or SDK, be sure it has
+[0.996s]   been installed.
+[0.996s] 
+[0.996s] [0m
+[0.996s] -- Configuring incomplete, errors occurred!
+[1.002s] gmake: *** [Makefile:295: cmake_check_build_system] Error 1
+[1.004s] Invoked command in '/root/assignment1_rt/build/assignment1_rt' returned '2': /usr/bin/cmake --build /root/assignment1_rt/build/assignment1_rt -- -j20 -l20

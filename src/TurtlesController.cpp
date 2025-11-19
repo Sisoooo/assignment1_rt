@@ -20,7 +20,7 @@ class TurtlesController: public rclcpp::Node{
         std::bind(&TurtlesController::timer_callback1, this));
         timer2_ = this->create_wall_timer(std::chrono::milliseconds(100),
         std::bind(&TurtlesController::timer_callback2, this));
-        timer_distance_ = this->create_wall_timer(std::chrono::milliseconds(100),
+        timer_distance_ = this->create_wall_timer(std::chrono::milliseconds(1000),
         std::bind(&TurtlesController::timer_distance_callback, this));
     }
     private: void topic_callback1(const turtlesim::msg::Pose::SharedPtr msg1){
@@ -41,17 +41,17 @@ class TurtlesController: public rclcpp::Node{
     }
     
     private: void timer_distance_callback(){
-        // Calculate and publish the distance between turtle1 and turtle2
+        auto message = std_msgs::msg::Float32();
+        float distance = std::sqrt(std::pow(turtle2_x_ - turtle1_x_, 2) + std::pow(turtle2_y_ - turtle1_y_, 2));
+        message.data = distance;
+        publisher_distance_ -> publish(message);
     } 
-
-    rclcpp::Subscription<turtlesim::msg::Pose>::SharedPtr subscription_;
-    rclcpp::Publisher<geometry_msgs::msg::Twist>::SharedPtr publisher_;
-    rclcpp::TimerBase::SharedPtr timer_;
+    rclcpp::Subscription<turtlesim::msg::Pose>::SharedPtr subscription1_, subscription2_;
+    rclcpp::Publisher<geometry_msgs::msg::Twist>::SharedPtr publisher1_, publisher2_;
+    rclcpp::Publisher<std_msgs::msg::Float32>::SharedPtr publisher_distance_;
+    rclcpp::TimerBase::SharedPtr timer1_, timer2_, timer_distance_;
     geometry_msgs::msg::Twist message_;
-    float turtle1_x_;
-    float turtle1_y_;
-    float turtle2_x_;
-    float turtle2_y_;
+    float turtle1_x_, turtle1_y_, turtle2_x_, turtle2_y_;
 };
 
 int main(int argc, char * argv[]){
