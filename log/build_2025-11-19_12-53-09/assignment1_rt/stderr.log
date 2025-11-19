@@ -1,0 +1,66 @@
+[01m[K/root/assignment1_rt/src/TurtlesController.cpp:[m[K In constructor ‘[01m[KTurtlesController::[01;32m[KTurtlesController[m[K()[m[K’:
+[01m[K/root/assignment1_rt/src/TurtlesController.cpp:23:9:[m[K [01;31m[Kerror: [m[K‘[01m[Ktimer_distance_[m[K’ was not declared in this scope; did you mean ‘[01m[Kpublisher_distance_[m[K’?
+   23 |         [01;31m[Ktimer_distance_[m[K = this->create_wall_timer(std::chrono::milliseconds(1000),
+      |         [01;31m[K^~~~~~~~~~~~~~~[m[K
+      |         [32m[Kpublisher_distance_[m[K
+[01m[K/root/assignment1_rt/src/TurtlesController.cpp:24:39:[m[K [01;31m[Kerror: [m[K‘[01m[Ktimer_distance_callback[m[K’ is not a member of ‘[01m[KTurtlesController[m[K’
+   24 |         std::bind(&TurtlesController::[01;31m[Ktimer_distance_callback[m[K, this));
+      |                                       [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/root/assignment1_rt/src/TurtlesController.cpp:[m[K In member function ‘[01m[Kvoid TurtlesController::[01;32m[Ktopic_callback1[m[K(turtlesim::msg::Pose_<std::allocator<void> >::SharedPtr)[m[K’:
+[01m[K/root/assignment1_rt/src/TurtlesController.cpp:27:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kturtle1_x_[m[K’ was not declared in this scope
+   27 |         [01;31m[Kturtle1_x_[m[K = msg1->x;
+      |         [01;31m[K^~~~~~~~~~[m[K
+[01m[K/root/assignment1_rt/src/TurtlesController.cpp:28:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kturtle1_y_[m[K’ was not declared in this scope
+   28 |         [01;31m[Kturtle1_y_[m[K = msg1->y;
+      |         [01;31m[K^~~~~~~~~~[m[K
+[01m[K/root/assignment1_rt/src/TurtlesController.cpp:[m[K In member function ‘[01m[Kvoid TurtlesController::[01;32m[Ktopic_callback2[m[K(turtlesim::msg::Pose_<std::allocator<void> >::SharedPtr)[m[K’:
+[01m[K/root/assignment1_rt/src/TurtlesController.cpp:31:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kturtle2_x_[m[K’ was not declared in this scope
+   31 |         [01;31m[Kturtle2_x_[m[K = msg2->x;
+      |         [01;31m[K^~~~~~~~~~[m[K
+[01m[K/root/assignment1_rt/src/TurtlesController.cpp:32:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kturtle2_y_[m[K’ was not declared in this scope
+   32 |         [01;31m[Kturtle2_y_[m[K = msg2->y;
+      |         [01;31m[K^~~~~~~~~~[m[K
+[01m[K/root/assignment1_rt/src/TurtlesController.cpp:[m[K In member function ‘[01m[Kvoid TurtlesController::[01;32m[Ktimer_callback1[m[K()[m[K’:
+[01m[K/root/assignment1_rt/src/TurtlesController.cpp:36:45:[m[K [01;31m[Kerror: [m[K‘[01m[Kturtle2_x_[m[K’ was not declared in this scope
+   36 |         float distance = std::sqrt(std::pow([01;31m[Kturtle2_x_[m[K - turtle1_x_, 2) + std::pow(turtle2_y_ - turtle1_y_, 2));
+      |                                             [01;31m[K^~~~~~~~~~[m[K
+[01m[K/root/assignment1_rt/src/TurtlesController.cpp:36:58:[m[K [01;31m[Kerror: [m[K‘[01m[Kturtle1_x_[m[K’ was not declared in this scope
+   36 |         float distance = std::sqrt(std::pow(turtle2_x_ - [01;31m[Kturtle1_x_[m[K, 2) + std::pow(turtle2_y_ - turtle1_y_, 2));
+      |                                                          [01;31m[K^~~~~~~~~~[m[K
+[01m[K/root/assignment1_rt/src/TurtlesController.cpp:36:84:[m[K [01;31m[Kerror: [m[K‘[01m[Kturtle2_y_[m[K’ was not declared in this scope
+   36 |         float distance = std::sqrt(std::pow(turtle2_x_ - turtle1_x_, 2) + std::pow([01;31m[Kturtle2_y_[m[K - turtle1_y_, 2));
+      |                                                                                    [01;31m[K^~~~~~~~~~[m[K
+[01m[K/root/assignment1_rt/src/TurtlesController.cpp:36:97:[m[K [01;31m[Kerror: [m[K‘[01m[Kturtle1_y_[m[K’ was not declared in this scope
+   36 |         float distance = std::sqrt(std::pow(turtle2_x_ - turtle1_x_, 2) + std::pow(turtle2_y_ - [01;31m[Kturtle1_y_[m[K, 2));
+      |                                                                                                 [01;31m[K^~~~~~~~~~[m[K
+[01m[K/root/assignment1_rt/src/TurtlesController.cpp:38:13:[m[K [01;31m[Kerror: [m[K‘[01m[Kmessage_[m[K’ was not declared in this scope
+   38 |             [01;31m[Kmessage_[m[K.linear.x = 0.0;
+      |             [01;31m[K^~~~~~~~[m[K
+[01m[K/root/assignment1_rt/src/TurtlesController.cpp:40:13:[m[K [01;31m[Kerror: [m[K‘[01m[Kpublisher1_[m[K’ was not declared in this scope
+   40 |             [01;31m[Kpublisher1_[m[K->publish(message_);
+      |             [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/root/assignment1_rt/src/TurtlesController.cpp:[m[K In member function ‘[01m[Kvoid TurtlesController::[01;32m[Ktimer_callback2[m[K()[m[K’:
+[01m[K/root/assignment1_rt/src/TurtlesController.cpp:45:45:[m[K [01;31m[Kerror: [m[K‘[01m[Kturtle2_x_[m[K’ was not declared in this scope
+   45 |         float distance = std::sqrt(std::pow([01;31m[Kturtle2_x_[m[K - turtle1_x_, 2) + std::pow(turtle2_y_ - turtle1_y_, 2));
+      |                                             [01;31m[K^~~~~~~~~~[m[K
+[01m[K/root/assignment1_rt/src/TurtlesController.cpp:45:58:[m[K [01;31m[Kerror: [m[K‘[01m[Kturtle1_x_[m[K’ was not declared in this scope
+   45 |         float distance = std::sqrt(std::pow(turtle2_x_ - [01;31m[Kturtle1_x_[m[K, 2) + std::pow(turtle2_y_ - turtle1_y_, 2));
+      |                                                          [01;31m[K^~~~~~~~~~[m[K
+[01m[K/root/assignment1_rt/src/TurtlesController.cpp:45:84:[m[K [01;31m[Kerror: [m[K‘[01m[Kturtle2_y_[m[K’ was not declared in this scope
+   45 |         float distance = std::sqrt(std::pow(turtle2_x_ - turtle1_x_, 2) + std::pow([01;31m[Kturtle2_y_[m[K - turtle1_y_, 2));
+      |                                                                                    [01;31m[K^~~~~~~~~~[m[K
+[01m[K/root/assignment1_rt/src/TurtlesController.cpp:45:97:[m[K [01;31m[Kerror: [m[K‘[01m[Kturtle1_y_[m[K’ was not declared in this scope
+   45 |         float distance = std::sqrt(std::pow(turtle2_x_ - turtle1_x_, 2) + std::pow(turtle2_y_ - [01;31m[Kturtle1_y_[m[K, 2));
+      |                                                                                                 [01;31m[K^~~~~~~~~~[m[K
+[01m[K/root/assignment1_rt/src/TurtlesController.cpp:47:13:[m[K [01;31m[Kerror: [m[K‘[01m[Kmessage_[m[K’ was not declared in this scope
+   47 |             [01;31m[Kmessage_[m[K.linear.x = 0.0;
+      |             [01;31m[K^~~~~~~~[m[K
+[01m[K/root/assignment1_rt/src/TurtlesController.cpp:49:13:[m[K [01;31m[Kerror: [m[K‘[01m[Kpublisher2_[m[K’ was not declared in this scope
+   49 |             [01;31m[Kpublisher2_[m[K->publish(message_);
+      |             [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/root/assignment1_rt/src/TurtlesController.cpp:52:5:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[Kprivate[m[K’
+   52 |     [01;31m[Kprivate[m[K: void timer_distance_callback(){
+      |     [01;31m[K^~~~~~~[m[K
+gmake[2]: *** [CMakeFiles/TurtlesController.dir/build.make:76: CMakeFiles/TurtlesController.dir/src/TurtlesController.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:168: CMakeFiles/TurtlesController.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

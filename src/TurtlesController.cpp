@@ -34,12 +34,20 @@ class TurtlesController: public rclcpp::Node{
 
     private: void timer_callback1(){
         float distance = std::sqrt(std::pow(turtle2_x_ - turtle1_x_, 2) + std::pow(turtle2_y_ - turtle1_y_, 2));
-        // Placeholder
+        if(distance < 1.5 || (turtle1_x_ < 1.0 || turtle1_x_ > 10.0 || turtle1_y_ < 1.0 || turtle1_y_ > 10.0)){
+            message_.linear.x = 0.0;
+            message_.angular.z = 0.0;
+            publisher1_->publish(message_);
+        }
     } 
 
     private: void timer_callback2(){
         float distance = std::sqrt(std::pow(turtle2_x_ - turtle1_x_, 2) + std::pow(turtle2_y_ - turtle1_y_, 2));
-        // Placeholder
+        if(distance < 1.5 || (turtle2_x_ < 1.0 || turtle2_x_ > 10.0 || turtle2_y_ < 1.0 || turtle2_y_ > 10.0)){
+            message_.linear.x = 0.0;
+            message_.angular.z = 0.0;
+            publisher2_->publish(message_);
+        }
     }
     
     private: void timer_distance_callback(){
