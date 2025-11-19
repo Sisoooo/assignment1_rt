@@ -33,11 +33,13 @@ class TurtlesController: public rclcpp::Node{
     }
 
     private: void timer_callback1(){
-        // Implement movement logic for turtle1 here
+        float distance = std::sqrt(std::pow(turtle2_x_ - turtle1_x_, 2) + std::pow(turtle2_y_ - turtle1_y_, 2));
+        // Placeholder
     } 
 
     private: void timer_callback2(){
-        // Implement movement logic for turtle2 here
+        float distance = std::sqrt(std::pow(turtle2_x_ - turtle1_x_, 2) + std::pow(turtle2_y_ - turtle1_y_, 2));
+        // Placeholder
     }
     
     private: void timer_distance_callback(){

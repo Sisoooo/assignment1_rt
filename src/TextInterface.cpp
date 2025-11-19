@@ -3,6 +3,7 @@
 #include "std_msgs/msg/string.hpp"
 #include "geometry_msgs/msg/twist.hpp"
 #include <iostream>
+#include <chrono>
 
 int main(int argc, char * argv[]){
     rclcpp::init(argc, argv);
@@ -25,20 +26,29 @@ int main(int argc, char * argv[]){
             rclcpp::shutdown();
             break;
         }
-        if(turtle_choice == "1"){
-            message.linear.x = std::stof(lx_input);
-            message.linear.y = std::stof(ly_input);
-            message.angular.z = std::stof(a_input);
-            publisher1_->publish(message);
+        message.linear.x = std::stof(lx_input);
+        message.linear.y = std::stof(ly_input);
+        message.angular.z = std::stof(a_input);
+
+        rclcpp::Rate rate(10);
+        auto start = std::chrono::steady_clock::now();
+        const auto duration = std::chrono::seconds(1);
+
+        if(turtle_choice == "1" || turtle_choice == "2"){
+            while (std::chrono::steady_clock::now() - start < duration){
+                if(turtle_choice == "1"){
+                    publisher1_->publish(message);
+                }
+                else if(turtle_choice == "2"){
+                    publisher2_->publish(message);
+                }
+                rclcpp::spin_some(node);
+                rate.sleep();
+            }
         }
-        else if(turtle_choice == "2"){
-            message.linear.x = std::stof(lx_input);
-            message.linear.y = std::stof(ly_input);
-            message.angular.z = std::stof(a_input);
-            publisher2_->publish(message);
-        } else {
+        else{
             std::cout << "Invalid turtle choice. Please enter 1 or 2." << std::endl;
-            std::getline(std::cin, turtle_choice);
+            continue;
         }
     }
 }
