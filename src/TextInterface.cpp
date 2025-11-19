@@ -13,22 +13,19 @@ int main(int argc, char * argv[]){
     auto message = geometry_msgs::msg::Twist();
     while(rclcpp::ok()){
         std::cout << "Interface to control turtles, press q at any prompt to quit" << std::endl;
-        std::string lx_input, ly_input, a_input, turtle_choice;
+        std::string x_input, z_input, turtle_choice;
         std::cout << "Enter linear velocity (x-axis) as float number (e.g. 1.0): " << std::endl;
-        std::getline(std::cin, lx_input);
-        std::cout << "Enter linear velocity (y-axis) as float number (e.g. 1.0): " << std::endl;
-        std::getline(std::cin, ly_input);
+        std::getline(std::cin, x_input);
         std::cout << "Enter angular velocity (z-axis) as float number (e.g. 1.0): " << std::endl;
-        std::getline(std::cin, a_input);
+        std::getline(std::cin, z_input);
         std::cout << "Enter turtle choice (1 or 2): " << std::endl;
         std::getline(std::cin, turtle_choice);
-        if(lx_input == "q" || ly_input == "q" || a_input == "q" || turtle_choice == "q"){
+        if(x_input == "q" || z_input == "q" || turtle_choice == "q"){
             rclcpp::shutdown();
             break;
         }
-        message.linear.x = std::stof(lx_input);
-        message.linear.y = std::stof(ly_input);
-        message.angular.z = std::stof(a_input);
+        message.linear.x = std::stof(x_input);
+        message.angular.z = std::stof(z_input);
 
         rclcpp::Rate rate(10);
         auto start = std::chrono::steady_clock::now();
@@ -43,12 +40,13 @@ int main(int argc, char * argv[]){
                     publisher2_->publish(message);
                 }
                 rclcpp::spin_some(node);
-                rate.sleep();
+                
             }
         }
         else{
             std::cout << "Invalid turtle choice. Please enter 1 or 2." << std::endl;
             continue;
         }
+        rate.sleep();
     }
 }

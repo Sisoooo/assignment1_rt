@@ -8,7 +8,6 @@ class SimpleSpawner(Node):
         super().__init__('simple_spawner')
         self.spawn_client = self.create_client(Spawn, '/spawn')
 
-        # Attende che il servizio spawn sia disponibile
         while not self.spawn_client.wait_for_service(timeout_sec=1.0):
             self.get_logger().info("waiting for /spawn...")
 

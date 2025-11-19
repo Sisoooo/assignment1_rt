@@ -20,7 +20,7 @@ class TurtlesController: public rclcpp::Node{
         std::bind(&TurtlesController::timer_callback1, this));
         timer2_ = this->create_wall_timer(std::chrono::milliseconds(100),
         std::bind(&TurtlesController::timer_callback2, this));
-        timer_distance_ = this->create_wall_timer(std::chrono::milliseconds(1000),
+        timer_distance_ = this->create_wall_timer(std::chrono::milliseconds(3000),
         std::bind(&TurtlesController::timer_distance_callback, this));
     }
     private: void topic_callback1(const turtlesim::msg::Pose::SharedPtr msg1){
@@ -36,7 +36,6 @@ class TurtlesController: public rclcpp::Node{
         float distance = std::sqrt(std::pow(turtle2_x_ - turtle1_x_, 2) + std::pow(turtle2_y_ - turtle1_y_, 2));
         if(distance < 1.5 || (turtle1_x_ < 1.0 || turtle1_x_ > 10.0 || turtle1_y_ < 1.0 || turtle1_y_ > 10.0)){
             message_.linear.x = 0.0;
-            message_.angular.z = 0.0;
             publisher1_->publish(message_);
         }
     } 
@@ -45,7 +44,6 @@ class TurtlesController: public rclcpp::Node{
         float distance = std::sqrt(std::pow(turtle2_x_ - turtle1_x_, 2) + std::pow(turtle2_y_ - turtle1_y_, 2));
         if(distance < 1.5 || (turtle2_x_ < 1.0 || turtle2_x_ > 10.0 || turtle2_y_ < 1.0 || turtle2_y_ > 10.0)){
             message_.linear.x = 0.0;
-            message_.angular.z = 0.0;
             publisher2_->publish(message_);
         }
     }
@@ -54,6 +52,7 @@ class TurtlesController: public rclcpp::Node{
         auto message = std_msgs::msg::Float32();
         float distance = std::sqrt(std::pow(turtle2_x_ - turtle1_x_, 2) + std::pow(turtle2_y_ - turtle1_y_, 2));
         message.data = distance;
+        RCLCPP_INFO(this->get_logger(), "Distance between turtles: %.2f", distance);
         publisher_distance_ -> publish(message);
     } 
     rclcpp::Subscription<turtlesim::msg::Pose>::SharedPtr subscription1_, subscription2_;

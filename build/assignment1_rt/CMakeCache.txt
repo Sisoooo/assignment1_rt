@@ -394,9 +394,6 @@ fastrtps_DIR:PATH=/opt/ros/jazzy/share/fastrtps/cmake
 //The directory containing a CMake configuration file for fastrtps_cmake_module.
 fastrtps_cmake_module_DIR:PATH=/opt/ros/jazzy/share/fastrtps_cmake_module/cmake
 
-//The directory containing a CMake configuration file for float32.
-float32_DIR:PATH=float32_DIR-NOTFOUND
-
 //The directory containing a CMake configuration file for foonathan_memory.
 foonathan_memory_DIR:PATH=/opt/ros/jazzy/lib/foonathan_memory/cmake
 

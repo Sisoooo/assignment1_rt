@@ -1,9 +1,0 @@
-[  0%] Built target ament_cmake_python_copy_assignment1_rt
-[ 50%] [32mBuilding CXX object CMakeFiles/interface_node.dir/src/interface_node.cpp.o[0m
-running egg_info
-writing assignment1_rt.egg-info/PKG-INFO
-writing dependency_links to assignment1_rt.egg-info/dependency_links.txt
-writing top-level names to assignment1_rt.egg-info/top_level.txt
-reading manifest file 'assignment1_rt.egg-info/SOURCES.txt'
-writing manifest file 'assignment1_rt.egg-info/SOURCES.txt'
-[ 50%] Built target ament_cmake_python_build_assignment1_rt_egg
