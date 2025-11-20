@@ -11,7 +11,7 @@ class SimpleSpawner(Node):
         while not self.spawn_client.wait_for_service(timeout_sec=1.0):
             self.get_logger().info("waiting for /spawn...")
 
-        # Richiesta per spawn
+        # Spawn request
         req = Spawn.Request()
         req.x = 2.5
         req.y = 2.5
