@@ -1,0 +1,46 @@
+[0.029s] Invoking command in '/root/assignment1_rt/build/assignment1_rt': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --build /root/assignment1_rt/build/assignment1_rt -- -j20 -l20
+[0.207s] [  0%] Built target ament_cmake_python_copy_assignment1_rt
+[0.247s] [ 25%] [32mBuilding CXX object CMakeFiles/TextInterface.dir/src/TextInterface.cpp.o[0m
+[0.249s] [ 75%] Built target TurtlesController
+[0.411s] running egg_info
+[0.427s] writing assignment1_rt.egg-info/PKG-INFO
+[0.428s] writing dependency_links to assignment1_rt.egg-info/dependency_links.txt
+[0.428s] writing top-level names to assignment1_rt.egg-info/top_level.txt
+[0.469s] reading manifest file 'assignment1_rt.egg-info/SOURCES.txt'
+[0.469s] writing manifest file 'assignment1_rt.egg-info/SOURCES.txt'
+[0.496s] [ 75%] Built target ament_cmake_python_build_assignment1_rt_egg
+[4.881s] [100%] [32m[1mLinking CXX executable TextInterface[0m
+[5.114s] [100%] Built target TextInterface
+[5.128s] Invoked command in '/root/assignment1_rt/build/assignment1_rt' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --build /root/assignment1_rt/build/assignment1_rt -- -j20 -l20
+[5.142s] Invoking command in '/root/assignment1_rt/build/assignment1_rt': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --install /root/assignment1_rt/build/assignment1_rt
+[5.152s] -- Install configuration: ""
+[5.153s] -- Installing: /root/assignment1_rt/install/assignment1_rt/lib/assignment1_rt/TextInterface
+[5.155s] -- Set non-toolchain portion of runtime path of "/root/assignment1_rt/install/assignment1_rt/lib/assignment1_rt/TextInterface" to ""
+[5.155s] -- Up-to-date: /root/assignment1_rt/install/assignment1_rt/lib/assignment1_rt/TurtlesController
+[5.156s] -- Up-to-date: /root/assignment1_rt/install/assignment1_rt/share/assignment1_rt/environment/pythonpath.sh
+[5.156s] -- Up-to-date: /root/assignment1_rt/install/assignment1_rt/share/assignment1_rt/environment/pythonpath.dsv
+[5.156s] -- Up-to-date: /root/assignment1_rt/install/assignment1_rt/lib/python3.12/site-packages/assignment1_rt-0.0.0-py3.12.egg-info
+[5.156s] -- Installing: /root/assignment1_rt/install/assignment1_rt/lib/python3.12/site-packages/assignment1_rt-0.0.0-py3.12.egg-info/PKG-INFO
+[5.156s] -- Installing: /root/assignment1_rt/install/assignment1_rt/lib/python3.12/site-packages/assignment1_rt-0.0.0-py3.12.egg-info/dependency_links.txt
+[5.156s] -- Installing: /root/assignment1_rt/install/assignment1_rt/lib/python3.12/site-packages/assignment1_rt-0.0.0-py3.12.egg-info/SOURCES.txt
+[5.157s] -- Installing: /root/assignment1_rt/install/assignment1_rt/lib/python3.12/site-packages/assignment1_rt-0.0.0-py3.12.egg-info/top_level.txt
+[5.157s] -- Up-to-date: /root/assignment1_rt/install/assignment1_rt/lib/python3.12/site-packages/assignment1_rt
+[5.157s] -- Up-to-date: /root/assignment1_rt/install/assignment1_rt/lib/python3.12/site-packages/assignment1_rt/__init__.py
+[5.197s] Listing '/root/assignment1_rt/install/assignment1_rt/lib/python3.12/site-packages/assignment1_rt'...
+[5.202s] -- Up-to-date: /root/assignment1_rt/install/assignment1_rt/lib/assignment1_rt/turtle_spawn.py
+[5.202s] -- Up-to-date: /root/assignment1_rt/install/assignment1_rt/share/ament_index/resource_index/package_run_dependencies/assignment1_rt
+[5.202s] -- Up-to-date: /root/assignment1_rt/install/assignment1_rt/share/ament_index/resource_index/parent_prefix_path/assignment1_rt
+[5.203s] -- Up-to-date: /root/assignment1_rt/install/assignment1_rt/share/assignment1_rt/environment/ament_prefix_path.sh
+[5.203s] -- Up-to-date: /root/assignment1_rt/install/assignment1_rt/share/assignment1_rt/environment/ament_prefix_path.dsv
+[5.203s] -- Up-to-date: /root/assignment1_rt/install/assignment1_rt/share/assignment1_rt/environment/path.sh
+[5.203s] -- Up-to-date: /root/assignment1_rt/install/assignment1_rt/share/assignment1_rt/environment/path.dsv
+[5.203s] -- Up-to-date: /root/assignment1_rt/install/assignment1_rt/share/assignment1_rt/local_setup.bash
+[5.203s] -- Up-to-date: /root/assignment1_rt/install/assignment1_rt/share/assignment1_rt/local_setup.sh
+[5.203s] -- Up-to-date: /root/assignment1_rt/install/assignment1_rt/share/assignment1_rt/local_setup.zsh
+[5.203s] -- Up-to-date: /root/assignment1_rt/install/assignment1_rt/share/assignment1_rt/local_setup.dsv
+[5.203s] -- Installing: /root/assignment1_rt/install/assignment1_rt/share/assignment1_rt/package.dsv
+[5.204s] -- Up-to-date: /root/assignment1_rt/install/assignment1_rt/share/ament_index/resource_index/packages/assignment1_rt
+[5.204s] -- Up-to-date: /root/assignment1_rt/install/assignment1_rt/share/assignment1_rt/cmake/assignment1_rtConfig.cmake
+[5.204s] -- Up-to-date: /root/assignment1_rt/install/assignment1_rt/share/assignment1_rt/cmake/assignment1_rtConfig-version.cmake
+[5.204s] -- Up-to-date: /root/assignment1_rt/install/assignment1_rt/share/assignment1_rt/package.xml
+[5.206s] Invoked command in '/root/assignment1_rt/build/assignment1_rt' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --install /root/assignment1_rt/build/assignment1_rt
