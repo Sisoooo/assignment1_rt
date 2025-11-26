@@ -20,13 +20,13 @@ int main(int argc, char * argv[]){
         // Sequential prompts for user to input linear and angular velocities and turtle ot be controlled
         std::cout << "Interface to control turtles, press q at any prompt to quit" << std::endl;
         std::string x_input, z_input, turtle_choice;
+        std::cout << "Enter turtle choice (1 or 2): " << std::endl;
+        std::getline(std::cin, turtle_choice);
         std::cout << "Enter linear velocity (x-axis) as float number (e.g. 1.0): " << std::endl;
         std::getline(std::cin, x_input);
         std::cout << "Enter angular velocity (z-axis) as float number (e.g. 1.0): " << std::endl;
         std::getline(std::cin, z_input);
-        std::cout << "Enter turtle choice (1 or 2): " << std::endl;
-        std::getline(std::cin, turtle_choice);
-
+        
         // Exit condition valid in any prompt
         if(x_input == "q" || z_input == "q" || turtle_choice == "q"){
             rclcpp::shutdown();
