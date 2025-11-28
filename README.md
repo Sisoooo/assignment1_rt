@@ -21,7 +21,7 @@ Requirements: ROS2 setup with Turtlesim installed
 Procedure to run the system:
 - Open four terminals, then run the following command sequence on every terminal: colcon build -> cd install -> source local_setup.bash -> cd ..
 - The terminal in which you run the Turtlesim window MUST refer to your ROS2 workspace's root folder
-- To run TurtleSim, use ros2 run turtlesim turtlesim_node. To run the other programmes, use ros2 run assignment1_rt <filename> instead on the respective terminal.
+- To run TurtleSim, use ros2 run turtlesim turtlesim_node. To run the other programmes, use ros2 run assignment1_rt {filename} instead on the respective terminal.
 - While running, use the terminal in which you run TextInterface to begin experimenting.
 - Enjoy!
 
