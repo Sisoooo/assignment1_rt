@@ -19,9 +19,23 @@ The three main folders are:
 Requirements: ROS2 setup with Turtlesim installed 
 
 Procedure to run the system:
-- Open four terminals, then run the following command sequence on every terminal: colcon build -> cd install -> source local_setup.bash -> cd ..
-- The terminal in which you run the Turtlesim window MUST refer to your ROS2 workspace's root folder
-- To run TurtleSim, use ros2 run turtlesim turtlesim_node. To run the other programmes, use ros2 run assignment1_rt {filename} instead on the respective terminal.
+- Open four terminals, three of which referred to the project folder and one referred to your ROS2 workspace's folder.
+- On one of the terminals referred to the project folder, use the following command sequence:
+  ```
+  colcon build
+  cd install
+  source setup.bash
+  cd ..
+  ```
+- To run TurtleSim, use the following command on the root terminal:
+  ```
+  ros2 run turtlesim turtlesim_node
+  ```
+- To run the other programmes, use the following command on the respective terminal instead:
+  ```
+  ros2 run assignment1_rt <executable> // For Cpp executables
+  ros2 run assignment1_rt turtle_spawn.py // For Python script
+  ```
 - While running, use the terminal in which you run TextInterface to begin experimenting.
 - Enjoy!
 
