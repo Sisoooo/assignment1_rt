@@ -21,7 +21,7 @@ ament_target_dependencies(TurtlesController rclcpp turtlesim std_msgs geometry_m
 install(TARGETS TextInterface TurtlesController DESTINATION lib/${PROJECT_NAME})
 
 ament_python_install_package(${PROJECT_NAME})
-install(PROGRAMS scripts/turtle_spawn.py scripts/third_turtle.py DESTINATION lib/${PROJECT_NAME})
+install(PROGRAMS scripts/turtle_spawn.py DESTINATION lib/${PROJECT_NAME})
 
 if(BUILD_TESTING)
   find_package(ament_lint_auto REQUIRED)
