@@ -14,8 +14,6 @@ class TurtlesController: public rclcpp::Node{
             std::bind(&TurtlesController::topic_callback1, this, _1));
         subscription2_ = this->create_subscription<turtlesim::msg::Pose>("turtle2/pose", 10,
             std::bind(&TurtlesController::topic_callback2, this, _1));
-        subscription3_ = this->create_subscription<turtlesim::msg::Pose>("turtle3/pose", 10,
-            std::bind(&TurtlesController::topic_callback3, this, _1));
         
         // Three publishers, two to control turtle velocities, one to publish distance between them
         publisher1_ = this->create_publisher<geometry_msgs::msg::Twist>("turtle1/cmd_vel", 10); 
@@ -29,8 +27,6 @@ class TurtlesController: public rclcpp::Node{
         std::bind(&TurtlesController::timer_callback2, this));
         timer_distance_ = this->create_wall_timer(std::chrono::milliseconds(3000),
         std::bind(&TurtlesController::timer_distance_callback, this));
-        timer3_ = this->create_wall_timer(std::chrono::milliseconds(3000),
-        std::bind(&TurtlesController::timer_callback3, this));
     }
     
     // Topic callbacks retrieve turtle positions without publishing them
@@ -41,10 +37,6 @@ class TurtlesController: public rclcpp::Node{
     private: void topic_callback2(const turtlesim::msg::Pose::SharedPtr msg2){
         turtle2_x_ = msg2->x;
         turtle2_y_ = msg2->y;
-    }
-    private: void topic_callback3(const turtlesim::msg::Pose::SharedPtr msg3){
-        turtle3_x_ = msg3->x;
-        turtle3_y_ = msg3->y;
     }
 
     // Timer callback 1 and 2 block the respective turtle's movement if it is too close to the other turtle or to the bounds 
@@ -71,23 +63,14 @@ class TurtlesController: public rclcpp::Node{
         RCLCPP_INFO(this->get_logger(), "Distance between turtles: %.2f", distance);
         publisher_distance_ -> publish(message);
     }
-
-    private: void timer_callback3(){
-        auto message = std_msgs::msg::Float32();
-        float distance13 = std::sqrt(std::pow(turtle3_x_ - turtle1_x_, 2) + std::pow(turtle3_y_ - turtle1_y_, 2));
-        message.data = distance13;
-        RCLCPP_INFO(this->get_logger(), "Distance between turtle1 and turtle3: %.2f", distance13);
-        publisher_distance_ -> publish(message);
-    }
-    
     
     // Initialized variables 
-    rclcpp::Subscription<turtlesim::msg::Pose>::SharedPtr subscription1_, subscription2_, subscription3_;
+    rclcpp::Subscription<turtlesim::msg::Pose>::SharedPtr subscription1_, subscription2_;
     rclcpp::Publisher<geometry_msgs::msg::Twist>::SharedPtr publisher1_, publisher2_;
     rclcpp::Publisher<std_msgs::msg::Float32>::SharedPtr publisher_distance_;
-    rclcpp::TimerBase::SharedPtr timer1_, timer2_, timer_distance_, timer3_;
+    rclcpp::TimerBase::SharedPtr timer1_, timer2_, timer_distance_;
     geometry_msgs::msg::Twist message_;
-    float turtle1_x_, turtle1_y_, turtle2_x_, turtle2_y_, turtle3_x_, turtle3_y_;
+    float turtle1_x_, turtle1_y_, turtle2_x_, turtle2_y_;
 };
 
 int main(int argc, char * argv[]){
